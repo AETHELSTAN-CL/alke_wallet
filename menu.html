@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wallet - Menú Principal</title>
+    <!-- Bootstrap + FontAwesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html" class="login-icon" title="Salir">
+            <i class="fa-solid fa-right-to-bracket fa-2x"></i>
+        </a>
+        <i class="fa-solid fa-hand-holding-dollar fa-3x mb-3"></i>
+        <h2 id="tituloBanca" class="mb-3">Banca Personal</h2>
+        <div class="form-group mb-3">
+            <label for="balance">Dinero en cuenta:</label>
+            <h3 id="saldoDisplay">$0</h3>
+            <!------- Sub-texto  ------->
+            <p id="sub_texto">Acceso directo</p>
+            <!------- grilla botones ------->
+            <div class="wallet-grid">
+
+                <a href="wallet.html" class="wallet-card">
+                    <i class="fa-solid fa-wallet icon-top"></i>
+                    <div class="divider"></div>
+                    <div class="label">Billetera Digital</div>
+                </a>
+
+                <a href="sendmoney.html" class="wallet-card">
+                    <i class="fa-solid fa-money-bill-transfer icon-top"></i>
+                    <div class="divider"></div>
+                    <div class="label">Enviar Dinero</div>
+                </a>
+
+                <a href="transactions.html" class="wallet-card">
+                    <i class="fa-solid fa-clock-rotate-left icon-top"></i>
+                    <div class="divider"></div>
+                    <div class="label">Últimos Movimientos</div>
+                </a>
+
+            </div>
+            <p id="menuMsg" class="text-center mt-2"></p>
+            <!-- jQuery -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <!-- JavaScript -->
+            <script src="assets/js/menu.js">
+
+            </script>
+</body>
+
+</html>

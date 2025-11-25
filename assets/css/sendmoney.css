@@ -1,0 +1,104 @@
+body {
+    background: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 450px;
+    margin: auto;
+    text-align: left;
+}
+
+.titulo-centro {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+#suggestions .list-group-item {
+    background-color: #bbb;
+    margin-bottom: 8px;
+    margin-top: -8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#contactList .list-group-item {
+    border-radius: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+.contact-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.contact-details {
+    font-size: 13px;
+    opacity: 0.8;
+    text-align: left;
+}
+
+/* Selección contacto */
+.selected-contact .contact-info {
+    border: 2px solid #0d6efd;
+    background-color: rgba(13, 110, 253, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
+}
+
+.btn-primary,
+.btn-success,
+.btn-secondary {
+    border-radius: 24px;
+    padding: 10px 24px;
+    font-weight: 600;
+}
+
+.btn-return {
+    display: block;
+    margin: 20px auto 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+.btn-return:hover {
+    text-decoration: none;
+    transform: translateX(-6px);
+}
+
+.modal-dialog {
+    max-width: 320px;
+    margin: auto;
+}
+
+.modal-content {
+    border-radius: 16px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: none;
+    justify-content: center;
+}
+
+.modal-title {
+    font-weight: bold;
+}

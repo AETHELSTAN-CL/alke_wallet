@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Enviar Dinero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/sendmoney.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="titulo-centro">Enviar Dinero</h2>
+
+        <form id="searchForm" class="mb-3">
+            <label for="searchContact"><strong>Buscar en la agenda:</strong></label>
+            <input type="text" class="form-control mt-1" id="searchContact" placeholder="Ingrese nombre de contacto">
+        </form>
+        <!-- Autocompletado -->
+        <div id="suggestions" class="list-group"></div>
+        <button class="btn btn-success mb-3 d-flex align-items-center gap-2" data-bs-toggle="modal"
+            data-bs-target="#contactModal">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Agregar nuevo contacto</span>
+        </button>
+
+        <h3>Contactos</h3>
+        <ul id="contactList" class="list-group mb-3">
+            <li class="list-group-item">
+                <div class="contact-info">
+                    <span class="contact-name">John Doe</span>
+                    <span class="contact-details">CBU: 123456789 <br>Alias: john.doe <br>Banco: ABC Bank</span>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="contact-info">
+                    <span class="contact-name">Jane Smith</span>
+                    <span class="contact-details">CBU: 987654321 <br>Alias: jane.smith <br>Banco: XYZ Bank</span>
+                </div>
+            </li>
+        </ul>
+
+        <p class="text-center"><strong>Saldo Actual: <span id="saldoDisplay">$0</span></strong></p>
+
+        <div class="form-group mb-3">
+            <label for="sendAmount" class="fw-bold">Monto a enviar:</label>
+            <input type="text" class="form-control" id="sendAmount" placeholder="Ingrese monto">
+        </div>
+
+        <button id="btnEnviar"
+            class="btn btn-primary btn-block w-100 d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-solid fa-money-bill-transfer"></i>
+            <span>Enviar Dinero</span>
+        </button>
+
+        <a href="menu.html" class="btn-return">← Volver al Menú Principal</a>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Agregar Nuevo Contacto</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newContactForm">
+                        <div class="form-group mb-2"><label>Nombre:</label><input type="text" class="form-control"
+                                id="newName" required></div>
+                        <div class="form-group mb-2"><label>CBU:</label><input type="text" class="form-control"
+                                id="newCBU" required></div>
+                        <div class="form-group mb-2"><label>Alias:</label><input type="text" class="form-control"
+                                id="newAlias" required></div>
+                        <div class="form-group mb-3"><label>Banco:</label><input type="text" class="form-control"
+                                id="newBank" required></div>
+                        <button type="submit" class="btn btn-success w-100"><i
+                                class="fa-solid fa-user-check me-2"></i>Guardar Contacto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- JavaScript -->
+    <script src="assets/js/sendmoney.js"></script>
+
+</body>
+
+</html>
